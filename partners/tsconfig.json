@@ -1,0 +1,105 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping for workspace packages */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"],
+      "@siso-public/shared-ui": ["../../packages/shared-ui/src/index.ts"],
+      "@siso-public/shared-ui/*": ["../../packages/shared-ui/src/*"],
+      "@siso-public/shared-config": ["../../packages/shared-config/src/index.ts"],
+      "@siso-public/shared-config/*": ["../../packages/shared-config/src/*"],
+      "@siso-public/shared-services": ["../../packages/shared-services/src/index.ts"],
+      "@siso-public/shared-services/*": ["../../packages/shared-services/src/*"],
+      "@siso-public/shared-types": ["../../packages/shared-types/src/index.ts"],
+      "@siso-public/shared-types/*": ["../../packages/shared-types/src/*"]
+    },
+
+    /* Additional type checking */
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+
+    /* Partner portal specific settings */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+
+    /* React specific */
+    "allowJs": false,
+    "checkJs": false,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+
+    /* Performance optimizations */
+    "assumeChangesOnlyAffectDirectDependencies": true
+  },
+  "include": [
+    "src",
+    "vite.config.ts",
+    "../../packages/shared-ui/src",
+    "../../packages/shared-config/src",
+    "../../packages/shared-services/src",
+    "../../packages/shared-types/src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../packages/shared-ui"
+    },
+    {
+      "path": "../../packages/shared-config"
+    },
+    {
+      "path": "../../packages/shared-services"
+    },
+    {
+      "path": "../../packages/shared-types"
+    }
+  ],
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "node"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# CODEOWNERS for SISO-PUBLIC monorepo
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners - these users will be requested for review on all PRs
+* @shaansisodia
+
+# Package-specific ownership
+/packages/shared-ui/ @shaansisodia
+/packages/shared-types/ @shaansisodia
+/packages/shared-config/ @shaansisodia
+/packages/shared-services/ @shaansisodia
+
+# Application-specific ownership
+/apps/clients/ @shaansisodia
+/apps/partners/ @shaansisodia
+
+# Infrastructure and CI/CD
+/.github/ @shaansisodia
+/vercel.json @shaansisodia
+/lighthouse.config.js @shaansisodia
+/vite.config.ts @shaansisodia
+
+# Documentation
+/docs/ @shaansisodia
+/README.md @shaansisodia
+
+# Configuration files
+/package.json @shaansisodia
+/pnpm-workspace.yaml @shaansisodia
+/tsconfig.json @shaansisodia
+/.gitignore @shaansisodia

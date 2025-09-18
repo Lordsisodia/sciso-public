@@ -11,8 +11,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@siso-public/shared-types": "workspace:*",
-    "@siso-public/shared-config": "workspace:*",
+    "@siso-public/shared-types": "file:../shared-types",
+    "@siso-public/shared-config": "file:../shared-config",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
